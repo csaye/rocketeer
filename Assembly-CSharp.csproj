@@ -55,14 +55,14 @@
   <ItemGroup>
      <Compile Include="Assets\Comet.cs" />
      <Compile Include="Assets\CreateComet.cs" />
+     <Compile Include="Assets\Darken.cs" />
      <Compile Include="Assets\Flash.cs" />
      <Compile Include="Assets\GameOver.cs" />
      <Compile Include="Assets\Ground.cs" />
-     <Compile Include="Assets\HundredsPlace.cs" />
+     <Compile Include="Assets\Highlight.cs" />
      <Compile Include="Assets\KeyInfo.cs" />
      <Compile Include="Assets\ObamaBlock.cs" />
      <Compile Include="Assets\ObamaMove.cs" />
-     <Compile Include="Assets\OnesPlace.cs" />
      <Compile Include="Assets\Prime.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
@@ -83,7 +83,6 @@
      <Compile Include="Assets\Score.cs" />
      <Compile Include="Assets\SmallBrainComet.cs" />
      <Compile Include="Assets\StartGame.cs" />
-     <Compile Include="Assets\TensPlace.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />

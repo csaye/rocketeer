@@ -33,187 +33,187 @@ private Rocket rocketScript;
 
     private void UpdateHundredsPlace() {
         if (Mathf.Floor(rocketScript.score / 100) == 0) {
-            oxx0.transform.position = new Vector2(oxx0.transform.position.x, 9.5f);
+            oxx0.SetActive(true);
         } else {
-            oxx0.transform.position = new Vector2(oxx0.transform.position.x, -999);
+            oxx0.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 1) {
-            oxx1.transform.position = new Vector2(oxx1.transform.position.x, 9.5f);
+            oxx1.SetActive(true);
         } else {
-            oxx1.transform.position = new Vector2(oxx1.transform.position.x, -999);
+            oxx1.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 2) {
-            oxx2.transform.position = new Vector2(oxx2.transform.position.x, 9.5f);
+            oxx2.SetActive(true);
         } else {
-            oxx2.transform.position = new Vector2(oxx2.transform.position.x, -999);
+            oxx2.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 3) {
-            oxx3.transform.position = new Vector2(oxx3.transform.position.x, 9.5f);
+            oxx3.SetActive(true);
         } else {
-            oxx3.transform.position = new Vector2(oxx3.transform.position.x, -999);
+            oxx3.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 4) {
-            oxx4.transform.position = new Vector2(oxx4.transform.position.x, 9.5f);
+            oxx4.SetActive(true);
         } else {
-            oxx4.transform.position = new Vector2(oxx4.transform.position.x, -999);
+            oxx4.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 5) {
-            oxx5.transform.position = new Vector2(oxx5.transform.position.x, 9.5f);
+            oxx5.SetActive(true);
         } else {
-            oxx5.transform.position = new Vector2(oxx5.transform.position.x, -999);
+            oxx5.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 6) {
-            oxx6.transform.position = new Vector2(oxx6.transform.position.x, 9.5f);
+            oxx6.SetActive(true);
         } else {
-            oxx6.transform.position = new Vector2(oxx6.transform.position.x, -999);
+            oxx6.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 7) {
-            oxx7.transform.position = new Vector2(oxx7.transform.position.x, 9.5f);
+            oxx7.SetActive(true);
         } else {
-            oxx7.transform.position = new Vector2(oxx7.transform.position.x, -999);
+            oxx7.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 8) {
-            oxx8.transform.position = new Vector2(oxx8.transform.position.x, 9.5f);
+            oxx8.SetActive(true);
         } else {
-            oxx8.transform.position = new Vector2(oxx8.transform.position.x, -999);
+            oxx8.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score / 100) == 9) {
-            oxx9.transform.position = new Vector2(oxx9.transform.position.x, 9.5f);
+            oxx9.SetActive(true);
         } else {
-            oxx9.transform.position = new Vector2(oxx9.transform.position.x, -999);
+            oxx9.SetActive(false);
         }
     }
 
     private void UpdateTensPlace() {
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 0) {
-            xox0.transform.position = new Vector2(xox0.transform.position.x, 9.5f);
+            xox0.SetActive(true);
         } else {
-            xox0.transform.position = new Vector2(xox0.transform.position.x, -999);
+            xox0.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 1) {
-            xox1.transform.position = new Vector2(xox1.transform.position.x, 9.5f);
+            xox1.SetActive(true);
         } else {
-            xox1.transform.position = new Vector2(xox1.transform.position.x, -999);
+            xox1.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 2) {
-            xox2.transform.position = new Vector2(xox2.transform.position.x, 9.5f);
+            xox2.SetActive(true);
         } else {
-            xox2.transform.position = new Vector2(xox2.transform.position.x, -999);
+            xox2.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 3) {
-            xox3.transform.position = new Vector2(xox3.transform.position.x, 9.5f);
+            xox3.SetActive(true);
         } else {
-            xox3.transform.position = new Vector2(xox3.transform.position.x, -999);
+            xox3.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 4) {
-            xox4.transform.position = new Vector2(xox4.transform.position.x, 9.5f);
+            xox4.SetActive(true);
         } else {
-            xox4.transform.position = new Vector2(xox4.transform.position.x, -999);
+            xox4.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 5) {
-            xox5.transform.position = new Vector2(xox5.transform.position.x, 9.5f);
+            xox5.SetActive(true);
         } else {
-            xox5.transform.position = new Vector2(xox5.transform.position.x, -999);
+            xox5.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 6) {
-            xox6.transform.position = new Vector2(xox6.transform.position.x, 9.5f);
+            xox6.SetActive(true);
         } else {
-            xox6.transform.position = new Vector2(xox6.transform.position.x, -999);
+            xox6.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 7) {
-            xox7.transform.position = new Vector2(xox7.transform.position.x, 9.5f);
+            xox7.SetActive(true);
         } else {
-            xox7.transform.position = new Vector2(xox7.transform.position.x, -999);
+            xox7.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 8) {
-            xox8.transform.position = new Vector2(xox8.transform.position.x, 9.5f);
+            xox8.SetActive(true);
         } else {
-            xox8.transform.position = new Vector2(xox8.transform.position.x, -999);
+            xox8.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 100 / 10) == 9) {
-            xox9.transform.position = new Vector2(xox9.transform.position.x, 9.5f);
+            xox9.SetActive(true);
         } else {
-            xox9.transform.position = new Vector2(xox9.transform.position.x, -999);
+            xox9.SetActive(false);
         }
     }
 
     private void UpdateOnesPlace() {
         if (Mathf.Floor(rocketScript.score % 10) == 0) {
-            xxo0.transform.position = new Vector2(xxo0.transform.position.x, 9.5f);
+            xxo0.SetActive(true);
         } else {
-            xxo0.transform.position = new Vector2(xxo0.transform.position.x, -999);
+            xxo0.SetActive(false);
         }
 
         if (Mathf.Floor(rocketScript.score % 10) == 1) {
-            xxo1.transform.position = new Vector2(xxo1.transform.position.x, 9.5f);
+            xxo1.SetActive(true);
         } else {
-            xxo1.transform.position = new Vector2(xxo1.transform.position.x, -999);
+            xxo1.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 2) {
-            xxo2.transform.position = new Vector2(xxo2.transform.position.x, 9.5f);
+            xxo2.SetActive(true);
         } else {
-            xxo2.transform.position = new Vector2(xxo2.transform.position.x, -999);
+            xxo2.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 3) {
-            xxo3.transform.position = new Vector2(xxo3.transform.position.x, 9.5f);
+            xxo3.SetActive(true);
         } else {
-            xxo3.transform.position = new Vector2(xxo3.transform.position.x, -999);
+            xxo3.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 4) {
-            xxo4.transform.position = new Vector2(xxo4.transform.position.x, 9.5f);
+            xxo4.SetActive(true);
         } else {
-            xxo4.transform.position = new Vector2(xxo4.transform.position.x, -999);
+            xxo4.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 5) {
-            xxo5.transform.position = new Vector2(xxo5.transform.position.x, 9.5f);
+            xxo5.SetActive(true);
         } else {
-            xxo5.transform.position = new Vector2(xxo5.transform.position.x, -999);
+            xxo5.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 6) {
-            xxo6.transform.position = new Vector2(xxo6.transform.position.x, 9.5f);
+            xxo6.SetActive(true);
         } else {
-            xxo6.transform.position = new Vector2(xxo6.transform.position.x, -999);
+            xxo6.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 7) {
-            xxo7.transform.position = new Vector2(xxo7.transform.position.x, 9.5f);
+            xxo7.SetActive(true);
         } else {
-            xxo7.transform.position = new Vector2(xxo7.transform.position.x, -999);
+            xxo7.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 8) {
-            xxo8.transform.position = new Vector2(xxo8.transform.position.x, 9.5f);
+            xxo8.SetActive(true);
         } else {
-            xxo8.transform.position = new Vector2(xxo8.transform.position.x, -999);
+            xxo8.SetActive(false);
         }
         
         if (Mathf.Floor(rocketScript.score % 10) == 9) {
-            xxo9.transform.position = new Vector2(xxo9.transform.position.x, 9.5f);
+            xxo9.SetActive(true);
         } else {
-            xxo9.transform.position = new Vector2(xxo9.transform.position.x, -999);
+            xxo9.SetActive(false);
         }
     }
 

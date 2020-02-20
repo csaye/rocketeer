@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19124634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61296512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -372,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67943483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -451,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78112310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -515,6 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103760533}
   - component: {fileID: 103760534}
+  - component: {fileID: 103760535}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -584,6 +585,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &103760535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103760532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e338bbab3f5e445aeac035cae8a8ceb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkenSpeed: 0.00014
+  waitTime: 300
 --- !u!1 &110865657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358192701473778378, guid: 54f45f997505849a78c83156a7bd0fd8,
@@ -610,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 961817010}
   gameOver: 0
-  bounds: 20
+  bounds: 22
   waitTime: 300
   cometSpeed: 0.1
 --- !u!1 &167879634
@@ -638,7 +653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167879634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -787,7 +802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198908205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -1179,7 +1194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247730594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -1291,7 +1306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307626519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -1480,7 +1495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415838341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -1559,7 +1574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492597981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -1638,7 +1653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494239922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -1879,7 +1894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597666347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -1958,7 +1973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619481107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -2037,7 +2052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642499734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -2117,7 +2132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 961817010}
   gameOver: 0
-  bounds: 20
+  bounds: 22
   waitTime: 300
   cometSpeed: 0.1
 --- !u!1 &924092626 stripped
@@ -2146,7 +2161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 961817010}
   gameOver: 0
-  bounds: 20
+  bounds: 22
   waitTime: 300
   cometSpeed: 0.1
 --- !u!1 &925005446
@@ -2174,7 +2189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925005446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -2253,7 +2268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961543801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -2352,9 +2367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f16c7bc27864096b2f1cb72a294634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  complete5: 0
+  godMode: 0
   comet: {fileID: 1358192701473778378, guid: 54f45f997505849a78c83156a7bd0fd8, type: 3}
-  sideBounds: 20
+  sideBounds: 22
   rocketJump: 2
   score: 0
   scoreSpeed: 60
@@ -2383,7 +2398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972709683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -2590,7 +2605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031378569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -999, z: 0}
+  m_LocalPosition: {x: -20, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 244858951}
@@ -2669,7 +2684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115495312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -2748,7 +2763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122302764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -3009,7 +3024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244376580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -3088,7 +3103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336651031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -3246,7 +3261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452372317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -3325,7 +3340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458253336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -3404,7 +3419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488793406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -3484,7 +3499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 961817010}
   gameOver: 0
-  bounds: 20
+  bounds: 22
   waitTime: 300
   cometSpeed: 0.1
 --- !u!1 &1522662841
@@ -3605,7 +3620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533541730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: -999, z: 0}
+  m_LocalPosition: {x: -22, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 402421376}
@@ -3684,7 +3699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695650617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -3763,7 +3778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722712690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -4017,7 +4032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771308078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}
@@ -4097,7 +4112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 961817010}
   gameOver: 0
-  bounds: 20
+  bounds: 22
   waitTime: 300
   cometSpeed: 0.1
 --- !u!1 &2027295773
@@ -4204,7 +4219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078470480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -999, z: 0}
+  m_LocalPosition: {x: -18, y: 9.5, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 236661949}

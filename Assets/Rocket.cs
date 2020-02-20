@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
 
-public bool complete5 = false;
+public bool godMode = false;
 
 public GameObject comet;
 
@@ -33,8 +33,11 @@ private bool liftOff = false;
 
         if (liftOff) {
             CheckMove();
-            CheckCollide();
             IncrementScore();
+        }
+
+        if (godMode) {
+            transform.position = new Vector3(23f, transform.position.y);
         }
     }
 
@@ -52,16 +55,6 @@ private bool liftOff = false;
         if (Input.GetKeyDown("d") || Input.GetKeyDown("right") && transform.position.x + rocketJump <= sideBounds) {
             transform.position = new Vector2(transform.position.x + rocketJump, transform.position.y);
         }
-    }
-
-    private void CheckCollide() {
-
-        // Debug.Log(comet.transform.position);
-
-        // if (transform.position.x == comet.transform.position.x && Mathf.Abs(transform.position.y - comet.transform.position.y) < 2) {
-        //     // Destroy(gameObject);
-        //     Debug.Log("game over");
-        // }
     }
 
     private void IncrementScore() {
