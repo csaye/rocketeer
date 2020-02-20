@@ -56,7 +56,7 @@ private bool liftOff = false;
 
     private void CheckCollide() {
 
-        Debug.Log(comet.transform.position);
+        // Debug.Log(comet.transform.position);
 
         // if (transform.position.x == comet.transform.position.x && Mathf.Abs(transform.position.y - comet.transform.position.y) < 2) {
         //     // Destroy(gameObject);

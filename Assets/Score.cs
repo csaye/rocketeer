@@ -20,7 +20,9 @@ private Rocket rocketScript;
 
     void Update()
     {
-        UpdateScore();
+        if (rocket.transform.position.y != -999) {
+            UpdateScore();
+        }
     }
 
     private void UpdateScore() {
