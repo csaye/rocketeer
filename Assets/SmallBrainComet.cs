@@ -38,6 +38,7 @@ private float randomX;
         if (waitTimeOver) {
             FadeDown();
             CheckCollide();
+            ChangeCometSpeed();
         }
     }
 
@@ -71,6 +72,12 @@ private float randomX;
 
             rocket.transform.position = new Vector2(transform.position.x, -999);
             Debug.Log("game over");
+        }
+    }
+
+    private void ChangeCometSpeed() {
+        if (cometSpeed < 0.8f) {
+            cometSpeed = cometSpeed + 0.0001f;
         }
     }
 }
