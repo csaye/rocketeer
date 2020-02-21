@@ -5,6 +5,8 @@ using UnityEngine;
 public class Flash : MonoBehaviour
 {
 
+public GameObject resetDummy;
+
 public float flashSpeed;
 
 private float frames;
@@ -21,7 +23,12 @@ private bool liftOff = false;
     // Update is called once per frame
     void Update()
     {
-        if (!liftOff) {
+
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (!liftOff && resetDummy.activeSelf) {
             FlashText();
             CheckFlash();
             CheckLiftOff();
@@ -50,5 +57,11 @@ private bool liftOff = false;
         if (!flashOn) {
             transform.position = new Vector2(transform.position.x, -999);
         }
+    }
+
+    private void Reset() {
+        frames = flashSpeed;
+        flashOn = true;
+        liftOff = false;
     }
 }

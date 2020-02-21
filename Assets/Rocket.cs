@@ -7,8 +7,6 @@ public class Rocket : MonoBehaviour
 
 public bool godMode = false;
 
-public GameObject comet;
-
 public float sideBounds;
 public float rocketJump;
 public float score;
@@ -17,6 +15,8 @@ public float scoreSpeed;
 private float frames;
 
 private bool liftOff = false;
+
+public GameObject resetDummy;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +27,21 @@ private bool liftOff = false;
     // Update is called once per frame
     void Update()
     {
-        if (!liftOff) {
+
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (!liftOff && resetDummy.activeSelf) {
             CheckLiftOff();
         }
 
-        if (liftOff) {
+        if (liftOff && resetDummy.activeSelf && transform.position.y != -999) {
             CheckMove();
             IncrementScore();
         }
 
-        if (godMode) {
+        if (godMode && resetDummy.activeSelf) {
             transform.position = new Vector3(23f, transform.position.y);
         }
     }
@@ -48,11 +53,11 @@ private bool liftOff = false;
     }
 
     private void CheckMove() {
-        if (Input.GetKeyDown("a") || Input.GetKeyDown("left") && transform.position.x - rocketJump >= (sideBounds * -1)) {
+        if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && transform.position.x - rocketJump >= (sideBounds * -1)) {
             transform.position = new Vector2(transform.position.x - rocketJump, transform.position.y);
         }
 
-        if (Input.GetKeyDown("d") || Input.GetKeyDown("right") && transform.position.x + rocketJump <= sideBounds) {
+        if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && transform.position.x + rocketJump <= sideBounds) {
             transform.position = new Vector2(transform.position.x + rocketJump, transform.position.y);
         }
     }
@@ -63,6 +68,10 @@ private bool liftOff = false;
             score++;
         }
         frames--;
+    }
+
+    private void Reset() {
+        liftOff = false;
     }
 
 }

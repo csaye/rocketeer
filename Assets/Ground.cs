@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ground : MonoBehaviour
 {
 
+public GameObject resetDummy;
+
 public float fadeSpeed;
 
 private bool liftOff = false;
@@ -18,7 +20,12 @@ private bool liftOff = false;
     // Update is called once per frame
     void Update()
     {
-        if (!liftOff) {
+
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (!liftOff && resetDummy.activeSelf) {
             CheckLiftOff();
         }
 
@@ -35,5 +42,10 @@ private bool liftOff = false;
 
     private void FadeDown() {
         transform.position = new Vector2(transform.position.x, transform.position.y - fadeSpeed);
+    }
+
+    private void Reset() {
+        liftOff = false;
+        transform.position = new Vector2(0, -11);
     }
 }

@@ -6,12 +6,15 @@ public class Score : MonoBehaviour
 {
 
 public GameObject rocket;
+public GameObject resetDummy;
 
 public GameObject oxx0, oxx1, oxx2, oxx3, oxx4, oxx5, oxx6, oxx7, oxx8, oxx9;
 public GameObject xox0, xox1, xox2, xox3, xox4, xox5, xox6, xox7, xox8, xox9;
 public GameObject xxo0, xxo1, xxo2, xxo3, xxo4, xxo5, xxo6, xxo7, xxo8, xxo9;
 
 private Rocket rocketScript;
+
+private bool liftOff = false;
 
     void Start()
     {
@@ -20,7 +23,16 @@ private Rocket rocketScript;
 
     void Update()
     {
-        if (rocket.transform.position.y != -999) {
+
+        if (!liftOff && resetDummy.activeSelf) {
+            CheckLiftOff();
+        }
+
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (resetDummy.activeSelf && rocket.transform.position.y != -999 && liftOff) {
             UpdateScore();
         }
     }
@@ -214,6 +226,16 @@ private Rocket rocketScript;
             xxo9.SetActive(true);
         } else {
             xxo9.SetActive(false);
+        }
+    }
+
+    private void Reset() {
+        liftOff = false;
+    }
+
+    private void CheckLiftOff() {
+        if (Input.GetKeyDown("space")) {
+            liftOff = true;
         }
     }
 

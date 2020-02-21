@@ -5,6 +5,8 @@ using UnityEngine;
 public class KeyInfo : MonoBehaviour
 {
 
+public GameObject resetDummy;
+
 private bool liftOff = false;
 
 public float fadeSpeed;
@@ -18,7 +20,12 @@ public float fadeSpeed;
     // Update is called once per frame
     void Update()
     {
-        if (!liftOff) {
+
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (!liftOff && resetDummy.activeSelf) {
             CheckLiftOff();
         }
 
@@ -35,5 +42,10 @@ public float fadeSpeed;
 
     private void FadeDown() {
         transform.position = new Vector2(transform.position.x, transform.position.y - fadeSpeed);
+    }
+
+    private void Reset() {
+        liftOff = false;
+        transform.position = new Vector2(transform.position.x, 20);
     }
 }

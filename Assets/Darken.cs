@@ -5,6 +5,8 @@ using UnityEngine;
 public class Darken : MonoBehaviour
 {
 
+public GameObject resetDummy;
+
 public float darkenSpeed;
 public float waitTime;
 
@@ -25,7 +27,11 @@ private Color color = new Color(1, 1, 1);
     void Update()
     {
 
-        if (!liftOff) {
+        if (!resetDummy.activeSelf) {
+            Reset();
+        }
+
+        if (!liftOff && resetDummy.activeSelf) {
             CheckLiftOff();
         }
 
@@ -45,7 +51,6 @@ private Color color = new Color(1, 1, 1);
     }
 
     private void DarkenSky() {
-        Debug.Log(brightness);
 
         color = new Color(brightness, brightness, brightness);
         spriteRenderer.color = color;
@@ -54,10 +59,18 @@ private Color color = new Color(1, 1, 1);
     }
 
     private void WaitTime() {
+        waitTime--;
         if (waitTime == 0) {
             waitTimeOver = true;
         }
-        waitTime--;
+    }
+
+    private void Reset() {
+        liftOff = false;
+        waitTimeOver = false;
+        brightness = 1;
+        color = new Color(brightness, brightness, brightness);
+        spriteRenderer.color = color;
     }
 
 }
