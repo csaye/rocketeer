@@ -5,6 +5,9 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
 
+public GameObject shopScore;
+public GameObject resetDummy;
+
 public bool godMode = false;
 
 public float sideBounds;
@@ -13,18 +16,21 @@ public float score;
 public float scoreSpeed;
 
 private float frames;
+private float scoreSpeedConstant;
 
 private bool liftOff = false;
 
-public GameObject resetDummy;
+private ShopScore shopScoreScript;
 
-    // Start is called before the first frame update
     void Start()
     {
         frames = scoreSpeed;
+
+        scoreSpeedConstant = scoreSpeed;
+
+        shopScoreScript = shopScore.GetComponent<ShopScore>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -43,6 +49,19 @@ public GameObject resetDummy;
 
         if (godMode && resetDummy.activeSelf) {
             transform.position = new Vector3(23f, transform.position.y);
+        }
+
+        if (shopScoreScript.currentTier <= 1) {
+            scoreSpeed = scoreSpeedConstant;
+        }
+        if (shopScoreScript.currentTier == 2) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.9f);
+        }
+        if (shopScoreScript.currentTier == 3) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.8f);
+        }
+        if (shopScoreScript.currentTier >= 4) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.7f);
         }
     }
 
@@ -65,7 +84,9 @@ public GameObject resetDummy;
     private void IncrementScore() {
         if (frames == 0) {
             frames = scoreSpeed;
-            score++;
+            if (score < 999) {
+                score++;
+            }
         }
         frames--;
     }

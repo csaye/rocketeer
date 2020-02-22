@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
 
+public GameObject shopCoins;
 public GameObject rocket;
 public GameObject resetDummy;
 public GameObject shop;
@@ -13,7 +14,6 @@ public GameObject comet1, comet2, comet3, comet4, comet5;
 public float bounds;
 public float waitTime;
 public float coinSpeed;
-public float coinValue;
 
 private bool liftOff = false;
 private bool waitTimeOver = false;
@@ -22,10 +22,11 @@ private bool coinCollected = false;
 private float randomX;
 private float coinSpeedConstant;
 private float waitTimeConstant;
+private float coinValue = 1;
 
 private Rocket rocketScript;
+private ShopCoins shopCoinsScript;
 
-    // Start is called before the first frame update
     void Start()
     {
         randomX = Mathf.Round(Random.Range(((bounds / 2) * -1), (bounds / 2))) * 2;
@@ -43,9 +44,9 @@ private Rocket rocketScript;
         waitTimeConstant = waitTime;
 
         rocketScript = rocket.GetComponent<Rocket>();
+        shopCoinsScript = shopCoins.GetComponent<ShopCoins>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!resetDummy.activeSelf) {
@@ -104,7 +105,7 @@ private Rocket rocketScript;
     private void CheckCollide() {
         if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && !coinCollected) {
             coinCollected = true;
-            rocketScript.score = rocketScript.score + coinValue;
+            IncrementScore();
             transform.position = new Vector2(-999, transform.position.y);
         }
     }
@@ -133,5 +134,27 @@ private Rocket rocketScript;
         }
 
         transform.position = new Vector2(randomX, 15);
+    }
+
+    private void IncrementScore() {
+
+        if (shopCoinsScript.currentTier <= 1) {
+            coinValue = 1;
+        }
+        if (shopCoinsScript.currentTier == 2) {
+            coinValue = 3;
+        }
+        if (shopCoinsScript.currentTier == 3) {
+            coinValue = 5;
+        }
+        if (shopCoinsScript.currentTier >= 4) {
+            coinValue = 10;
+        }
+
+        if (rocketScript.score + coinValue < 999) {
+            rocketScript.score = rocketScript.score + coinValue;
+        } else {
+            rocketScript.score = 999;
+        }
     }
 }

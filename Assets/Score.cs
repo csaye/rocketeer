@@ -32,7 +32,7 @@ private bool liftOff = false;
             Reset();
         }
 
-        if (resetDummy.activeSelf && rocket.transform.position.y != -999 && liftOff) {
+        if (resetDummy.activeSelf) {
             UpdateScore();
         }
     }
