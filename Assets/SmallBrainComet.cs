@@ -89,7 +89,7 @@ private CometController cometControllerScript;
     }
 
     private void CheckCollide() {
-        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6) {
+        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && rocket.transform.position.y == 0) {
             if (!collisionRegistered) {
                 collisionRegistered = true;
                 if (cometControllerScript.lives <= 0) {

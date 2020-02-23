@@ -23,7 +23,6 @@ private bool liftOff = false;
 
     void Update()
     {
-
         if (!liftOff && resetDummy.activeSelf) {
             CheckLiftOff();
         }

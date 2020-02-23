@@ -42,7 +42,7 @@ private ShopScore shopScoreScript;
             CheckLiftOff();
         }
 
-        if (liftOff && resetDummy.activeSelf && transform.position.y != -999) {
+        if (liftOff && resetDummy.activeSelf && transform.position.y == 0) {
             CheckMove();
             IncrementScore();
         }

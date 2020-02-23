@@ -103,7 +103,7 @@ private ShopCoins shopCoinsScript;
     }
 
     private void CheckCollide() {
-        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && !coinCollected) {
+        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && !coinCollected && rocket.transform.position.y == 0) {
             coinCollected = true;
             IncrementScore();
             transform.position = new Vector2(-999, transform.position.y);
