@@ -14,6 +14,7 @@ private bool liftOff = false;
 private bool waitTimeOver = false;
 
 private float brightness = 1;
+private float waitTimeConstant;
 
 private SpriteRenderer spriteRenderer;
 
@@ -21,6 +22,8 @@ private Color color = new Color(1, 1, 1);
 
     void Start()
     {
+        waitTimeConstant = waitTime;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -68,6 +71,7 @@ private Color color = new Color(1, 1, 1);
     private void Reset() {
         liftOff = false;
         waitTimeOver = false;
+        waitTime = waitTimeConstant;
         brightness = 1;
         color = new Color(brightness, brightness, brightness);
         spriteRenderer.color = color;

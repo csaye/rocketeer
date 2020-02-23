@@ -32,7 +32,7 @@ private bool liftOff = false;
             Reset();
         }
 
-        if (resetDummy.activeSelf) {
+        if (resetDummy.activeSelf && rocketScript.score <= 999) {
             UpdateScore();
         }
     }

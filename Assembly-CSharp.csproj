@@ -55,12 +55,14 @@
   <ItemGroup>
      <Compile Include="Assets\Coin.cs" />
      <Compile Include="Assets\Comet.cs" />
+     <Compile Include="Assets\CometController.cs" />
      <Compile Include="Assets\Continue.cs" />
      <Compile Include="Assets\CreateComet.cs" />
      <Compile Include="Assets\Darken.cs" />
      <Compile Include="Assets\Flash.cs" />
      <Compile Include="Assets\GameOver.cs" />
      <Compile Include="Assets\Ground.cs" />
+     <Compile Include="Assets\HeartController.cs" />
      <Compile Include="Assets\Highlight.cs" />
      <Compile Include="Assets\KeyInfo.cs" />
      <Compile Include="Assets\ObamaBlock.cs" />

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SmallBrainComet : MonoBehaviour
 {
 
+public GameObject cometController;
 public GameObject shopLives;
 public GameObject rocket;
 public GameObject resetDummy;
@@ -24,9 +25,9 @@ private bool collisionRegistered = false;
 private float randomX;
 private float cometSpeedConstant;
 private float waitTimeConstant;
-private float lives;
 
 private ShopLives shopLivesScript;
+private CometController cometControllerScript;
 
     void Start()
     {
@@ -38,6 +39,7 @@ private ShopLives shopLivesScript;
         waitTimeConstant = waitTime;
 
         shopLivesScript = shopLives.GetComponent<ShopLives>();
+        cometControllerScript = cometController.GetComponent<CometController>();
     }
 
     void Update()
@@ -74,7 +76,6 @@ private ShopLives shopLivesScript;
             randomX = Mathf.Round(Random.Range(((bounds / 2) * -1), (bounds / 2))) * 2;
 
             transform.position = new Vector2(randomX, 15);
-            collisionRegistered = false;
         }
 
         transform.position = new Vector2(transform.position.x, transform.position.y - cometSpeed);
@@ -88,14 +89,18 @@ private ShopLives shopLivesScript;
     }
 
     private void CheckCollide() {
-        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && !collisionRegistered) {
-            collisionRegistered = true;
-            if (lives <= 0) {
-                gameOver = true;
-                rocket.transform.position = new Vector2(0, -999);
-            } else {
-                lives--;
+        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6) {
+            if (!collisionRegistered) {
+                collisionRegistered = true;
+                if (cometControllerScript.lives <= 0) {
+                    gameOver = true;
+                    rocket.transform.position = new Vector2(0, -999);
+                } else {
+                    cometControllerScript.lives--;
+                }
             }
+        } else {
+            collisionRegistered = false;
         }
     }
 
@@ -118,16 +123,16 @@ private ShopLives shopLivesScript;
         transform.position = new Vector2(randomX, startY);
 
         if (shopLivesScript.currentTier <= 1) {
-            lives = 0;
+            cometControllerScript.lives = 0;
         }
         if (shopLivesScript.currentTier == 2) {
-            lives = 1;
+            cometControllerScript.lives = 1;
         }
         if (shopLivesScript.currentTier == 3) {
-            lives = 2;
+            cometControllerScript.lives = 2;
         }
         if (shopLivesScript.currentTier >= 4) {
-            lives = 3;
+            cometControllerScript.lives = 3;
         }
     }
 }
