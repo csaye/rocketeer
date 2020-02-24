@@ -78,6 +78,8 @@ private ShopCoins shopCoinsScript;
 
         if (transform.position.y < -15) {
 
+            GetComponent<Renderer>().enabled = true;
+
             randomX = Mathf.Round(Random.Range(((bounds / 2) * -1), (bounds / 2))) * 2;
             while (randomX == comet1.transform.position.x
             || randomX == comet2.transform.position.x
@@ -106,7 +108,7 @@ private ShopCoins shopCoinsScript;
         if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && !coinCollected && rocket.transform.position.y == 0) {
             coinCollected = true;
             IncrementScore();
-            transform.position = new Vector2(-999, transform.position.y);
+            GetComponent<Renderer>().enabled = false;
         }
     }
 
