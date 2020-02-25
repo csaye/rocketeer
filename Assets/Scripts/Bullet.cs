@@ -39,7 +39,7 @@ private bool bulletFired = false;
             CheckFire();
         }
 
-        if (liftOff && shopBulletScript.currentTier >= 1 && transform.position.y < 12) {
+        if (liftOff && shopBulletScript.currentTier >= 1 && transform.position.y < 12 && bulletFired) {
             CheckCollide();
         }
 
@@ -102,10 +102,8 @@ private bool bulletFired = false;
     }
 
     private void BulletHit(GameObject comet) {
-        Debug.Log("hit");
         comet.GetComponent<Renderer>().enabled = false;
         GetComponent<Renderer>().enabled = false;
         bulletFired = false;
-
     }
 }

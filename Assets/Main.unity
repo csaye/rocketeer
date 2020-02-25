@@ -3506,7 +3506,7 @@ MonoBehaviour:
   rocketJump: 2
   score: 0
   scoreSpeed: 60
-  cooldownSpeed: 12
+  cooldownSpeed: 10
 --- !u!1 &963283389
 GameObject:
   m_ObjectHideFlags: 0
