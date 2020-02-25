@@ -103,6 +103,7 @@
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_MissingScriptEditor.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_Preferences.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
+     <Compile Include="Assets\VSCode\Plugins\Editor\VSCode.cs" />
  <Reference Include="Unity.ProBuilder">
  <HintPath>/Users/coopersaye/Desktop/VR-Software-Development_A-Maze-6.1.1/Platformer/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>

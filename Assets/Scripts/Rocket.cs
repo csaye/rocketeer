@@ -14,8 +14,11 @@ public float sideBounds;
 public float rocketJump;
 public float score;
 public float scoreSpeed;
+public float cooldownSpeed;
 
 private float frames;
+private float cooldownFramesLeft;
+private float cooldownFramesRight;
 private float scoreSpeedConstant;
 
 private bool liftOff = false;
@@ -44,6 +47,7 @@ private ShopScore shopScoreScript;
 
         if (liftOff && resetDummy.activeSelf && transform.position.y == 0) {
             CheckMove();
+            CheckCooldown();
             IncrementScore();
         }
 
@@ -51,18 +55,7 @@ private ShopScore shopScoreScript;
             transform.position = new Vector3(23f, transform.position.y);
         }
 
-        if (shopScoreScript.currentTier <= 1) {
-            scoreSpeed = scoreSpeedConstant;
-        }
-        if (shopScoreScript.currentTier == 2) {
-            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.9f);
-        }
-        if (shopScoreScript.currentTier == 3) {
-            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.8f);
-        }
-        if (shopScoreScript.currentTier >= 4) {
-            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.7f);
-        }
+        CheckScoreSpeed();
     }
 
     private void CheckLiftOff() {
@@ -72,12 +65,18 @@ private ShopScore shopScoreScript;
     }
 
     private void CheckMove() {
-        if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && transform.position.x - rocketJump >= (sideBounds * -1)) {
-            transform.position = new Vector2(transform.position.x - rocketJump, transform.position.y);
+        if ((Input.GetKey("a") || Input.GetKey("left")) && transform.position.x - rocketJump >= (sideBounds * -1)) {
+            if (cooldownFramesLeft < 0 || (Input.GetKeyDown("a") || Input.GetKeyDown("left"))) {
+                transform.position = new Vector2(transform.position.x - rocketJump, transform.position.y);
+                cooldownFramesLeft = cooldownSpeed;
+            }
         }
 
-        if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && transform.position.x + rocketJump <= sideBounds) {
-            transform.position = new Vector2(transform.position.x + rocketJump, transform.position.y);
+        if ((Input.GetKey("d") || Input.GetKey("right")) && transform.position.x + rocketJump <= sideBounds) {
+            if (cooldownFramesRight < 0 || (Input.GetKeyDown("d") || Input.GetKeyDown("right"))) {
+                transform.position = new Vector2(transform.position.x + rocketJump, transform.position.y);
+                cooldownFramesRight = cooldownSpeed;
+            }
         }
     }
 
@@ -95,4 +94,23 @@ private ShopScore shopScoreScript;
         liftOff = false;
     }
 
+    private void CheckScoreSpeed() {
+        if (shopScoreScript.currentTier <= 1) {
+            scoreSpeed = scoreSpeedConstant;
+        }
+        if (shopScoreScript.currentTier == 2) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.9f);
+        }
+        if (shopScoreScript.currentTier == 3) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.8f);
+        }
+        if (shopScoreScript.currentTier >= 4) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.7f);
+        }
+    }
+
+    private void CheckCooldown() {
+        cooldownFramesLeft--;
+        cooldownFramesRight--;
+    }
 }

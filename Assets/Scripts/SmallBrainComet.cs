@@ -73,8 +73,8 @@ private CometController cometControllerScript;
     private void FadeDown() {
 
         if (transform.position.y < -15) {
+            GetComponent<Renderer>().enabled = true;
             randomX = Mathf.Round(Random.Range(((bounds / 2) * -1), (bounds / 2))) * 2;
-
             transform.position = new Vector2(randomX, 15);
         }
 
@@ -89,7 +89,7 @@ private CometController cometControllerScript;
     }
 
     private void CheckCollide() {
-        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && rocket.transform.position.y == 0) {
+        if (Mathf.Round(transform.position.x) == Mathf.Round(rocket.transform.position.x) && transform.position.y > -10 && transform.position.y < -6 && rocket.transform.position.y == 0 && GetComponent<Renderer>().enabled == true) {
             if (!collisionRegistered) {
                 collisionRegistered = true;
                 if (cometControllerScript.lives <= 0) {
@@ -134,5 +134,7 @@ private CometController cometControllerScript;
         if (shopLivesScript.currentTier >= 4) {
             cometControllerScript.lives = 3;
         }
+
+        GetComponent<Renderer>().enabled = true;
     }
 }
