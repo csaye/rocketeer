@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
 public GameObject rocket;
 public GameObject resetDummy;
 
+public GameObject k0, k1, k2, k3, k4, k5, k6, k7, k8, k9;
 public GameObject oxx0, oxx1, oxx2, oxx3, oxx4, oxx5, oxx6, oxx7, oxx8, oxx9;
 public GameObject xox0, xox1, xox2, xox3, xox4, xox5, xox6, xox7, xox8, xox9;
 public GameObject xxo0, xxo1, xxo2, xxo3, xxo4, xxo5, xxo6, xxo7, xxo8, xxo9;
@@ -31,73 +32,136 @@ private bool liftOff = false;
             Reset();
         }
 
-        if (resetDummy.activeSelf && rocketScript.score <= 999) {
+        if (resetDummy.activeSelf && rocketScript.score <= 9999) {
             UpdateScore();
         }
     }
 
     private void UpdateScore() {
+        UpdateThousandsPlace();
         UpdateHundredsPlace();
         UpdateTensPlace();
         UpdateOnesPlace();
     }
 
+    private void UpdateThousandsPlace() {
+        if (Mathf.Floor(rocketScript.score / 1000) == 0) {
+            k0.SetActive(true);
+        } else {
+            k0.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 1) {
+            k1.SetActive(true);
+        } else {
+            k1.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 2) {
+            k2.SetActive(true);
+        } else {
+            k2.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 3) {
+            k3.SetActive(true);
+        } else {
+            k3.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 4) {
+            k4.SetActive(true);
+        } else {
+            k4.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 5) {
+            k5.SetActive(true);
+        } else {
+            k5.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 6) {
+            k6.SetActive(true);
+        } else {
+            k6.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 7) {
+            k7.SetActive(true);
+        } else {
+            k7.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 8) {
+            k8.SetActive(true);
+        } else {
+            k8.SetActive(false);
+        }
+
+        if (Mathf.Floor(rocketScript.score / 1000) == 9) {
+            k9.SetActive(true);
+        } else {
+            k9.SetActive(false);
+        }
+    }
+
     private void UpdateHundredsPlace() {
-        if (Mathf.Floor(rocketScript.score / 100) == 0) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 0) {
             oxx0.SetActive(true);
         } else {
             oxx0.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 1) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 1) {
             oxx1.SetActive(true);
         } else {
             oxx1.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 2) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 2) {
             oxx2.SetActive(true);
         } else {
             oxx2.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 3) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 3) {
             oxx3.SetActive(true);
         } else {
             oxx3.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 4) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 4) {
             oxx4.SetActive(true);
         } else {
             oxx4.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 5) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 5) {
             oxx5.SetActive(true);
         } else {
             oxx5.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 6) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 6) {
             oxx6.SetActive(true);
         } else {
             oxx6.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 7) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 7) {
             oxx7.SetActive(true);
         } else {
             oxx7.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 8) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 8) {
             oxx8.SetActive(true);
         } else {
             oxx8.SetActive(false);
         }
 
-        if (Mathf.Floor(rocketScript.score / 100) == 9) {
+        if (Mathf.Floor(rocketScript.score % 1000 / 100) == 9) {
             oxx9.SetActive(true);
         } else {
             oxx9.SetActive(false);

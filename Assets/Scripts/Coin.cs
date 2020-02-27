@@ -153,10 +153,10 @@ private ShopCoins shopCoinsScript;
             coinValue = 10;
         }
 
-        if (rocketScript.score + coinValue < 999) {
+        if (rocketScript.score + coinValue < 9999) {
             rocketScript.score = rocketScript.score + coinValue;
         } else {
-            rocketScript.score = 999;
+            rocketScript.score = 9999;
         }
     }
 }

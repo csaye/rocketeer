@@ -89,7 +89,7 @@ private Achievement achievementScript5;
     private void IncrementScore() {
         if (frames == 0) {
             frames = scoreSpeed;
-            if (score < 999) {
+            if (score < 9999) {
                 score++;
             }
         }
