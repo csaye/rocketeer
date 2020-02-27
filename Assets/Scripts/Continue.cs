@@ -8,6 +8,7 @@ public class Continue : MonoBehaviour
 public GameObject shop;
 public GameObject rocket;
 public GameObject resetDummy;
+public GameObject achievements;
 
 public Sprite normal;
 public Sprite light;
@@ -36,7 +37,7 @@ private float waitTimeConstant;
     void Update()
     {
 
-        if (shop.transform.position.y == 24) {
+        if (shop.transform.position.y == 24 && achievements.transform.position.y != 48) {
             CheckHighlight();
         }
 

@@ -15,6 +15,7 @@ public GameObject priceBullet;
 public GameObject shopCoins;
 public GameObject shopLives;
 public GameObject shopScore;
+public GameObject achievements;
 
 public float currentTier;
 
@@ -44,7 +45,7 @@ private bool active = false;
             CheckActive();
         }
 
-        if (active && shop.transform.position.y == 24) {
+        if (active && shop.transform.position.y == 24 && achievements.transform.position.y != 48) {
             CheckHighlight();
         }
 
