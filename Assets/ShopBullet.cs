@@ -16,6 +16,10 @@ public GameObject shopCoins;
 public GameObject shopLives;
 public GameObject shopScore;
 public GameObject achievements;
+public GameObject achievement1;
+public GameObject achievement6;
+public GameObject achievement7;
+public GameObject achievement8;
 
 public float currentTier;
 
@@ -25,6 +29,11 @@ private Rocket rocketScript;
 private ShopCoins shopCoinsScript;
 private ShopLives shopLivesScript;
 private ShopScore shopScoreScript;
+
+private Achievement achievementScript1;
+private Achievement achievementScript6;
+private Achievement achievementScript7;
+private Achievement achievementScript8;
 
 private bool active = false;
 
@@ -36,10 +45,16 @@ private bool active = false;
         shopCoinsScript = shopCoins.GetComponent<ShopCoins>();
         shopLivesScript = shopLives.GetComponent<ShopLives>();
         shopScoreScript = shopScore.GetComponent<ShopScore>();
+        achievementScript1 = achievement1.GetComponent<Achievement>();
+        achievementScript6 = achievement6.GetComponent<Achievement>();
+        achievementScript7 = achievement7.GetComponent<Achievement>();
+        achievementScript8 = achievement8.GetComponent<Achievement>();
     }
 
     void Update()
     {
+
+        CheckAchievements();
 
         if (!active) {
             CheckActive();
@@ -88,6 +103,10 @@ private bool active = false;
         if (currentTier == 0 && rocketScript.score >= 500) {
             rocketScript.score = rocketScript.score - 500;
             currentTier++;
+            
+            if (!achievementScript1.unlocked) {
+                achievementScript1.unlocked = true;
+            }
         }
     }
 
@@ -109,5 +128,17 @@ private bool active = false;
         active = false;
         GetComponent<Renderer>().enabled = false;
         priceBullet.GetComponent<Renderer>().enabled = false;
+    }
+
+    private void CheckAchievements() {
+        if ((shopCoinsScript.currentTier >= 2 || shopLivesScript.currentTier >= 2 || shopScoreScript.currentTier >= 2) && !achievementScript6.unlocked) {
+            achievementScript6.unlocked = true;
+        }
+        if ((shopCoinsScript.currentTier >= 4 || shopLivesScript.currentTier >= 4 || shopScoreScript.currentTier >= 4) && !achievementScript7.unlocked) {
+            achievementScript7.unlocked = true;
+        }
+        if ((shopCoinsScript.currentTier >= 4 && shopLivesScript.currentTier >= 4 && shopScoreScript.currentTier >= 2) && !achievementScript8.unlocked) {
+            achievementScript8.unlocked = true;
+        }
     }
 }

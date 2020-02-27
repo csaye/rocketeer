@@ -38,8 +38,6 @@ private SpriteRenderer spriteRenderer;
 
     void Update()
     {
-        // 137.6x // 184.0x // 317.0x // 363.4x // 497.6x // 544.0x // 677.6x // 724.0x //
-        // 40.7y // 85.3y // 184.2y // 228.8y //
 
         if (achievements.transform.position.y == 48) {
             CheckHighlight();

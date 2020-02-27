@@ -56,6 +56,15 @@
      <Compile Include="Assets\Achievement.cs" />
      <Compile Include="Assets\AchievementsButton.cs" />
      <Compile Include="Assets\ButtonController.cs" />
+     <Compile Include="Assets\Popup.cs" />
+     <Compile Include="Assets\Popup1.cs" />
+     <Compile Include="Assets\Popup2.cs" />
+     <Compile Include="Assets\Popup3.cs" />
+     <Compile Include="Assets\Popup4.cs" />
+     <Compile Include="Assets\Popup5.cs" />
+     <Compile Include="Assets\Popup6.cs" />
+     <Compile Include="Assets\Popup7.cs" />
+     <Compile Include="Assets\Popup8.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />

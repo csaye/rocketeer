@@ -7,6 +7,7 @@ public class Rocket : MonoBehaviour
 
 public GameObject shopScore;
 public GameObject resetDummy;
+public GameObject achievement5;
 
 public bool godMode = false;
 
@@ -20,10 +21,12 @@ private float frames;
 private float cooldownFramesLeft;
 private float cooldownFramesRight;
 private float scoreSpeedConstant;
+private float flights;
 
 private bool liftOff = false;
 
 private ShopScore shopScoreScript;
+private Achievement achievementScript5;
 
     void Start()
     {
@@ -32,6 +35,7 @@ private ShopScore shopScoreScript;
         scoreSpeedConstant = scoreSpeed;
 
         shopScoreScript = shopScore.GetComponent<ShopScore>();
+        achievementScript5 = achievement5.GetComponent<Achievement>();
     }
 
     void Update()
@@ -61,6 +65,8 @@ private ShopScore shopScoreScript;
     private void CheckLiftOff() {
         if (Input.GetKeyDown("space")) {
             liftOff = true;
+            flights++;
+            CheckAchievements();
         }
     }
 
@@ -112,5 +118,11 @@ private ShopScore shopScoreScript;
     private void CheckCooldown() {
         cooldownFramesLeft--;
         cooldownFramesRight--;
+    }
+
+    private void CheckAchievements() {
+        if (flights >= 10 && !achievementScript5.unlocked) {
+            achievementScript5.unlocked = true;
+        }
     }
 }
