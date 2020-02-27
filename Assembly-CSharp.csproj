@@ -102,6 +102,7 @@
      <Compile Include="Assets\Scripts\ShopCoins.cs" />
      <Compile Include="Assets\Scripts\ShopLives.cs" />
      <Compile Include="Assets\Scripts\ShopMenu.cs" />
+     <Compile Include="Assets\Scripts\ShopOutline.cs" />
      <Compile Include="Assets\Scripts\ShopScore.cs" />
      <Compile Include="Assets\Scripts\SmallBrainComet.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
