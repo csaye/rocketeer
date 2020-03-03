@@ -11,6 +11,7 @@ public GameObject heart2;
 public GameObject heart3;
 public GameObject shop;
 
+public Sprite heartGold;
 public Sprite heart;
 public Sprite heartDead;
 
@@ -51,10 +52,25 @@ private SpriteRenderer spriteRenderer3;
             spriteRenderer2.sprite = heart;
             spriteRenderer3.sprite = heartDead;
         }
-        if (cometControllerScript.lives >= 3) {
+        if (cometControllerScript.lives == 3) {
             spriteRenderer1.sprite = heart;
             spriteRenderer2.sprite = heart;
             spriteRenderer3.sprite = heart;
+        }
+        if (cometControllerScript.lives == 4) {
+            spriteRenderer1.sprite = heartGold;
+            spriteRenderer2.sprite = heart;
+            spriteRenderer3.sprite = heart;
+        }
+        if (cometControllerScript.lives == 5) {
+            spriteRenderer1.sprite = heartGold;
+            spriteRenderer2.sprite = heartGold;
+            spriteRenderer3.sprite = heart;
+        }
+        if (cometControllerScript.lives >= 6) {
+            spriteRenderer1.sprite = heartGold;
+            spriteRenderer2.sprite = heartGold;
+            spriteRenderer3.sprite = heartGold;
         }
     }
 

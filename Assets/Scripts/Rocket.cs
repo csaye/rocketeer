@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour
 {
 
 public GameObject shopScore;
+public GameObject shopMaxScore;
 public GameObject resetDummy;
 public GameObject achievement5;
 
@@ -26,6 +27,7 @@ private float flights;
 private bool liftOff = false;
 
 private ShopScore shopScoreScript;
+private ShopMaxScore shopMaxScoreScript;
 private Achievement achievementScript5;
 
     void Start()
@@ -35,6 +37,7 @@ private Achievement achievementScript5;
         scoreSpeedConstant = scoreSpeed;
 
         shopScoreScript = shopScore.GetComponent<ShopScore>();
+        shopMaxScoreScript = shopMaxScore.GetComponent<ShopMaxScore>();
         achievementScript5 = achievement5.GetComponent<Achievement>();
     }
 
@@ -110,8 +113,11 @@ private Achievement achievementScript5;
         if (shopScoreScript.currentTier == 3) {
             scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.8f);
         }
-        if (shopScoreScript.currentTier >= 4) {
+        if (shopScoreScript.currentTier >= 4 && shopMaxScoreScript.currentTier == 1) {
             scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.7f);
+        }
+        if (shopMaxScoreScript.currentTier >= 2) {
+            scoreSpeed = Mathf.Round(scoreSpeedConstant * 0.3f);
         }
     }
 

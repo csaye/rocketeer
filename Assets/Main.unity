@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cometController: {fileID: 978201667}
   shopLives: {fileID: 193052552}
+  shopMaxLives: {fileID: 1162753734}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}
@@ -4235,6 +4236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cometController: {fileID: 978201667}
   shopLives: {fileID: 193052552}
+  shopMaxLives: {fileID: 1162753734}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}
@@ -5346,6 +5348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cometController: {fileID: 978201667}
   shopLives: {fileID: 193052552}
+  shopMaxLives: {fileID: 1162753734}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}
@@ -5637,6 +5640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopScore: {fileID: 1915559532}
+  shopMaxScore: {fileID: 1714083727}
   resetDummy: {fileID: 845179802}
   achievement5: {fileID: 1216193968}
   godMode: 0
@@ -7962,6 +7966,7 @@ MonoBehaviour:
   heart2: {fileID: 1375354751}
   heart3: {fileID: 2019777413}
   shop: {fileID: 259402324}
+  heartGold: {fileID: 21300000, guid: de3cb6eedc2e94c79ad5dcb17de05cb6, type: 3}
   heart: {fileID: 21300000, guid: e90b1f397d2164a0599b442e35af7403, type: 3}
   heartDead: {fileID: 21300000, guid: c13075f93aacf4e6ca70728c01e2ae72, type: 3}
 --- !u!4 &1415642972
@@ -8091,6 +8096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopCoins: {fileID: 1942637997}
+  shopMaxCoins: {fileID: 1735689463}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}
@@ -8643,6 +8649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cometController: {fileID: 978201667}
   shopLives: {fileID: 193052552}
+  shopMaxLives: {fileID: 1162753734}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}
@@ -11043,6 +11050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cometController: {fileID: 978201667}
   shopLives: {fileID: 193052552}
+  shopMaxLives: {fileID: 1162753734}
   rocket: {fileID: 961817010}
   resetDummy: {fileID: 845179802}
   shop: {fileID: 259402324}

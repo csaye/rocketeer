@@ -7,6 +7,7 @@ public class SmallBrainComet : MonoBehaviour
 
 public GameObject cometController;
 public GameObject shopLives;
+public GameObject shopMaxLives;
 public GameObject rocket;
 public GameObject resetDummy;
 public GameObject shop;
@@ -27,6 +28,7 @@ private float cometSpeedConstant;
 private float waitTimeConstant;
 
 private ShopLives shopLivesScript;
+private ShopMaxLives shopMaxLivesScript;
 private CometController cometControllerScript;
 
     void Start()
@@ -39,6 +41,7 @@ private CometController cometControllerScript;
         waitTimeConstant = waitTime;
 
         shopLivesScript = shopLives.GetComponent<ShopLives>();
+        shopMaxLivesScript = shopMaxLives.GetComponent<ShopMaxLives>();
         cometControllerScript = cometController.GetComponent<CometController>();
     }
 
@@ -131,8 +134,11 @@ private CometController cometControllerScript;
         if (shopLivesScript.currentTier == 3) {
             cometControllerScript.lives = 2;
         }
-        if (shopLivesScript.currentTier >= 4) {
+        if (shopLivesScript.currentTier >= 4 && shopMaxLivesScript.currentTier == 1) {
             cometControllerScript.lives = 3;
+        }
+        if (shopMaxLivesScript.currentTier >= 2) {
+            cometControllerScript.lives = 6;
         }
 
         GetComponent<Renderer>().enabled = true;

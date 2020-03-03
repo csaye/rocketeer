@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
 
 public GameObject shopCoins;
+public GameObject shopMaxCoins;
 public GameObject rocket;
 public GameObject resetDummy;
 public GameObject shop;
@@ -26,6 +27,7 @@ private float coinValue = 1;
 
 private Rocket rocketScript;
 private ShopCoins shopCoinsScript;
+private ShopMaxCoins shopMaxCoinsScript;
 
     void Start()
     {
@@ -45,6 +47,7 @@ private ShopCoins shopCoinsScript;
 
         rocketScript = rocket.GetComponent<Rocket>();
         shopCoinsScript = shopCoins.GetComponent<ShopCoins>();
+        shopMaxCoinsScript = shopMaxCoins.GetComponent<ShopMaxCoins>();
     }
 
     void Update()
@@ -149,8 +152,11 @@ private ShopCoins shopCoinsScript;
         if (shopCoinsScript.currentTier == 3) {
             coinValue = 5;
         }
-        if (shopCoinsScript.currentTier >= 4) {
+        if (shopCoinsScript.currentTier >= 4 && shopMaxCoinsScript.currentTier == 1) {
             coinValue = 10;
+        }
+        if (shopMaxCoinsScript.currentTier >= 2) {
+            coinValue = 50;
         }
 
         if (rocketScript.score + coinValue < 9999) {
