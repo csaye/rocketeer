@@ -35,7 +35,7 @@ private bool bulletFired = false;
             CheckLiftOff();
         }
 
-        if (liftOff && shopBulletScript.currentTier >= 1) {
+        if (liftOff && shopBulletScript.currentTier >= 1 && rocket.transform.position.y == 0) {
             CheckFire();
         }
 

@@ -45,7 +45,7 @@ private bool exploded;
 
     private void MoveToComet() {
         transform.position = new Vector2(comet.transform.position.x, comet.transform.position.y);
-        if (comet.transform.position.y == 15) {
+        if (comet.transform.position.y > 14) {
             exploded = false;
         }
     }
