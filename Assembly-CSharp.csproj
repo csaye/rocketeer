@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CometExplosion.cs" />
+     <Compile Include="Assets\PriceMaxCoins.cs" />
+     <Compile Include="Assets\PriceMaxLives.cs" />
+     <Compile Include="Assets\PriceMaxScore.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -75,6 +77,7 @@
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\Comet.cs" />
      <Compile Include="Assets\Scripts\CometController.cs" />
+     <Compile Include="Assets\Scripts\CometExplosion.cs" />
      <Compile Include="Assets\Scripts\Continue.cs" />
      <Compile Include="Assets\Scripts\CreateComet.cs" />
      <Compile Include="Assets\Scripts\Darken.cs" />
@@ -106,6 +109,9 @@
      <Compile Include="Assets\Scripts\ShopScore.cs" />
      <Compile Include="Assets\Scripts\SmallBrainComet.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
+     <Compile Include="Assets\ShopMaxCoins.cs" />
+     <Compile Include="Assets\ShopMaxLives.cs" />
+     <Compile Include="Assets\ShopMaxScore.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
