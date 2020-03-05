@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 44
+    y: 45
     width: 1440
     height: 802
   m_ShowMode: 4
@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 752
-  m_MinSize: {x: 679, y: 324}
-  m_MaxSize: {x: 12004, y: 8024}
+  m_MinSize: {x: 679, y: 348}
+  m_MaxSize: {x: 12004, y: 8048}
   vertical: 0
-  controlID: 29
+  controlID: 45
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,10 +215,10 @@ MonoBehaviour:
     y: 0
     width: 1148
     height: 752
-  m_MinSize: {x: 404, y: 324}
-  m_MaxSize: {x: 8004, y: 8024}
+  m_MinSize: {x: 404, y: 348}
+  m_MaxSize: {x: 8004, y: 8048}
   vertical: 1
-  controlID: 30
+  controlID: 46
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 31
+  controlID: 47
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Rocketeer
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Rocketeer
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/coopersaye/Desktop/VR-Software-Development_A-Maze-6.1.1/Platformer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 188}
-    m_SelectedIDs: a2140000
-    m_LastClickedID: 5282
-    m_ExpandedIDs: 000000005c0f0000f61000004813000066180000d0190000921a0000701c0000f01d0000521e00001044000012440000
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 521e0000
+    m_LastClickedID: 7762
+    m_ExpandedIDs: 000000005c0f0000f610000048130000b616000066180000d0190000921a0000701c0000f01d0000521e0000104400001244000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,8 +402,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d0840000
-    m_LastClickedInstanceID: 34000
+    m_SelectedInstanceIDs: ca250000
+    m_LastClickedInstanceID: 9674
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -429,7 +429,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 30}
+    m_ScrollPosition: {x: 0, y: 50.000305}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 115
 --- !u!114 &14
@@ -498,7 +498,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 26250000
       m_LastClickedID: 9510
-      m_ExpandedIDs: dcfbffff10240000ce240000f824000034250000442500006a260000fe260000
+      m_ExpandedIDs: c2f7ffffc4f7ffffcaf7ffffd0f7ffffd6f7ffffdcfbffff10240000ce240000342500003e250000ca250000de2500006a260000fe260000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2123095, y: -26.324694, z: -0.12890625}
+    m_Target: {x: 13.212695, y: -1.5734795, z: -0.35490584}
     speed: 2
-    m_Value: {x: 1.2123095, y: -26.324694, z: -0.12890625}
+    m_Value: {x: 13.212695, y: -1.5734795, z: -0.35490584}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 27.483192
+    m_Target: 50.737495
     speed: 2
-    m_Value: 27.483192
+    m_Value: 50.737495
   m_Ortho:
     m_Target: 1
     speed: 2

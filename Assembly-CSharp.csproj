@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Cloud.cs" />
      <Compile Include="Assets\PriceMaxCoins.cs" />
      <Compile Include="Assets\PriceMaxLives.cs" />
      <Compile Include="Assets\PriceMaxScore.cs" />
