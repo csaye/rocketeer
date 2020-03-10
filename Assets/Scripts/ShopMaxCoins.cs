@@ -12,6 +12,7 @@ public Sprite coinsOut;
 public GameObject shop;
 public GameObject rocket;
 public GameObject achievements;
+public GameObject customize;
 public GameObject shopCoins;
 
 public float currentTier = 1;
@@ -29,7 +30,7 @@ private SpriteRenderer spriteRenderer;
 
     void Update()
     {
-        if (shop.transform.position.y == 24 && achievements.transform.position.y != 48 && shopCoins.GetComponent<Renderer>().enabled == false) {
+        if (shop.transform.position.y == 24 && achievements.transform.position.y != 48 && customize.transform.position.y != 72 && shopCoins.GetComponent<Renderer>().enabled == false) {
             CheckHighlight();
             GetComponent<Renderer>().enabled = true;
         } else {

@@ -16,6 +16,7 @@ public GameObject shopCoins;
 public GameObject shopLives;
 public GameObject shopScore;
 public GameObject achievements;
+public GameObject customize;
 public GameObject achievement1;
 public GameObject achievement6;
 public GameObject achievement7;

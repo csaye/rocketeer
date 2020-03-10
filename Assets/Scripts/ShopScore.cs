@@ -16,6 +16,7 @@ public Sprite scoreOut;
 public GameObject shop;
 public GameObject rocket;
 public GameObject achievements;
+public GameObject customize;
 
 public float currentTier = 1;
 

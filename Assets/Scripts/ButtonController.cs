@@ -14,6 +14,10 @@ public GameObject customize;
 
 public Text achievementsText;
 public Text shopText;
+public Text defaultText;
+public Text customText;
+
+public bool defaultMode = true;
 
     void Start()
     {
@@ -27,13 +31,31 @@ public Text shopText;
     }
 
     private void UpdateButtonStatus() {
-        if (achievements.transform.position.y == 48 || customize.transform.position.y == 72) {
+        if (achievements.transform.position.y == 48) {
 
             menuGrayAchievements.GetComponent<Renderer>().enabled = false;
             menuGrayShop.GetComponent<Renderer>().enabled = true;
 
             achievementsText.enabled = false;
             shopText.enabled = true;
+            defaultText.enabled = false;
+            customText.enabled = false;
+
+        } else if (customize.transform.position.y == 72) {
+
+            menuGrayAchievements.GetComponent<Renderer>().enabled = false;
+            menuGrayShop.GetComponent<Renderer>().enabled = true;
+
+            achievementsText.enabled = false;
+            shopText.enabled = true;
+
+            if (defaultMode) {
+                defaultText.enabled = true;
+                customText.enabled = false;
+            } else {
+                defaultText.enabled = false;
+                customText.enabled = true;
+            }
 
         } else if (shop.transform.position.y == 24) {
 
@@ -42,6 +64,8 @@ public Text shopText;
 
             achievementsText.enabled = true;
             shopText.enabled = false;
+            defaultText.enabled = false;
+            customText.enabled = false;
         
         } else {
 
@@ -50,6 +74,8 @@ public Text shopText;
 
             achievementsText.enabled = false;
             shopText.enabled = false;
+            defaultText.enabled = false;
+            customText.enabled = false;
 
         }
     }

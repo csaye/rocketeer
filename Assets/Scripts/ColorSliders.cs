@@ -7,6 +7,9 @@ public class ColorSliders : MonoBehaviour
 
     public GameObject customize;
 
+    public GUIStyle slider;
+    public GUIStyle thumb;
+
     public float xPos, yPos;
 
     private SpriteRenderer m_SpriteRenderer;
@@ -24,6 +27,10 @@ public class ColorSliders : MonoBehaviour
         m_SpriteRenderer.color = Color.blue;
 
         yPosConstant = yPos;
+
+        m_Red = 1;
+        m_Blue = 1;
+        m_Green = 1;
     }
 
     void Update() {
@@ -52,11 +59,11 @@ public class ColorSliders : MonoBehaviour
     private void OnGUI()
     {
 
-        m_Red = GUI.HorizontalSlider(new Rect(xPos, yPos, 200, 30), m_Red, 0, 1);
+        m_Red = GUI.HorizontalSlider(new Rect(xPos, yPos, 200, 30), m_Red, 0, 1, slider, thumb);
 
-        m_Green = GUI.HorizontalSlider(new Rect(xPos, yPos + 35, 200, 30), m_Green, 0, 1);
+        m_Green = GUI.HorizontalSlider(new Rect(xPos, yPos + 35, 200, 30), m_Green, 0, 1, slider, thumb);
 
-        m_Blue = GUI.HorizontalSlider(new Rect(xPos, yPos + 70, 200, 30), m_Blue, 0, 1);
+        m_Blue = GUI.HorizontalSlider(new Rect(xPos, yPos + 70, 200, 30), m_Blue, 0, 1, slider, thumb);
 
         m_NewColor = new Color(m_Red, m_Green, m_Blue);
 
