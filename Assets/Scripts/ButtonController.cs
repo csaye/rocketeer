@@ -10,6 +10,7 @@ public GameObject menuGrayAchievements;
 public GameObject menuGrayShop;
 public GameObject shop;
 public GameObject achievements;
+public GameObject customize;
 
 public Text achievementsText;
 public Text shopText;
@@ -26,7 +27,7 @@ public Text shopText;
     }
 
     private void UpdateButtonStatus() {
-        if (achievements.transform.position.y == 48) {
+        if (achievements.transform.position.y == 48 || customize.transform.position.y == 72) {
 
             menuGrayAchievements.GetComponent<Renderer>().enabled = false;
             menuGrayShop.GetComponent<Renderer>().enabled = true;

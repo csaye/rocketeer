@@ -29,7 +29,7 @@ private bool liftOff = false;
             CheckLiftOff();
         }
 
-        if (liftOff && transform.position.y > -15) {
+        if (liftOff && transform.position.y > -16) {
             FadeDown();
         }
     }

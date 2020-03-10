@@ -7,6 +7,7 @@ public class ShopButton : MonoBehaviour
 
 public GameObject shop;
 public GameObject achievements;
+public GameObject customize;
 
 public Sprite normal;
 public Sprite light;
@@ -20,7 +21,7 @@ private SpriteRenderer spriteRenderer;
 
     void Update()
     {
-        if (achievements.transform.position.y == 48) {
+        if (achievements.transform.position.y == 48 || customize.transform.position.y == 72) {
             CheckHighlight();
         }
     }
@@ -39,6 +40,7 @@ private SpriteRenderer spriteRenderer;
 
     private void ShopMenu() {
         achievements.transform.position = new Vector2(0, 0);
+        customize.transform.position = new Vector2(0, 0);
     }
 
     private void Light() {

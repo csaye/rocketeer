@@ -53,10 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Cloud.cs" />
-     <Compile Include="Assets\PriceMaxCoins.cs" />
-     <Compile Include="Assets\PriceMaxLives.cs" />
-     <Compile Include="Assets\PriceMaxScore.cs" />
+     <Compile Include="Assets\CustomizeButton.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -75,7 +72,9 @@
      <Compile Include="Assets\Scripts\AchievementsButton.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\ButtonController.cs" />
+     <Compile Include="Assets\Scripts\Cloud.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\ColorSliders.cs" />
      <Compile Include="Assets\Scripts\Comet.cs" />
      <Compile Include="Assets\Scripts\CometController.cs" />
      <Compile Include="Assets\Scripts\CometExplosion.cs" />
@@ -95,6 +94,9 @@
      <Compile Include="Assets\Scripts\Popup.cs" />
      <Compile Include="Assets\Scripts\PriceCoins.cs" />
      <Compile Include="Assets\Scripts\PriceLives.cs" />
+     <Compile Include="Assets\Scripts\PriceMaxCoins.cs" />
+     <Compile Include="Assets\Scripts\PriceMaxLives.cs" />
+     <Compile Include="Assets\Scripts\PriceMaxScore.cs" />
      <Compile Include="Assets\Scripts\PriceScore.cs" />
      <Compile Include="Assets\Scripts\Prime.cs" />
      <Compile Include="Assets\Scripts\Rocket.cs" />
@@ -105,14 +107,14 @@
      <Compile Include="Assets\Scripts\ShopButton.cs" />
      <Compile Include="Assets\Scripts\ShopCoins.cs" />
      <Compile Include="Assets\Scripts\ShopLives.cs" />
+     <Compile Include="Assets\Scripts\ShopMaxCoins.cs" />
+     <Compile Include="Assets\Scripts\ShopMaxLives.cs" />
+     <Compile Include="Assets\Scripts\ShopMaxScore.cs" />
      <Compile Include="Assets\Scripts\ShopMenu.cs" />
      <Compile Include="Assets\Scripts\ShopOutline.cs" />
      <Compile Include="Assets\Scripts\ShopScore.cs" />
      <Compile Include="Assets\Scripts\SmallBrainComet.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
-     <Compile Include="Assets\ShopMaxCoins.cs" />
-     <Compile Include="Assets\ShopMaxLives.cs" />
-     <Compile Include="Assets\ShopMaxScore.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />

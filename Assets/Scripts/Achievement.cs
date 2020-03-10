@@ -7,6 +7,7 @@ public class Achievement : MonoBehaviour
 {
 
 public GameObject achievements;
+public GameObject customize;
 
 public Sprite normal;
 public Sprite light;
@@ -85,7 +86,7 @@ private SpriteRenderer spriteRenderer;
     }
 
     private void CheckTextShow() {
-        if (achievements.transform.position.y == 48) {
+        if (achievements.transform.position.y == 48 || customize.transform.position.y == 72) {
             elev1.enabled = false;
             elev2.enabled = false;
             best1.enabled = false;
