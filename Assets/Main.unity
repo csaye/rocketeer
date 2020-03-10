@@ -377,7 +377,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &39655942
@@ -3550,7 +3550,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &492597981
@@ -4039,7 +4039,7 @@ MonoBehaviour:
   cloudB: {fileID: 563751831}
   cloudC: {fileID: 1035009155}
   cloudD: {fileID: 1543213162}
-  startY: 39
+  startY: 21
   bounds: 21
   waitTime: 1
   cloudSpeed: 0.025
@@ -4101,6 +4101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561584609}
   - component: {fileID: 561584610}
+  - component: {fileID: 561584611}
   m_Layer: 0
   m_Name: Price (bullet)
   m_TagString: Untagged
@@ -4170,6 +4171,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &561584611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561584608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29a39778b5bb4dcc878e1d8d438967f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopBullet: {fileID: 346323489}
+  shop: {fileID: 259402324}
+  price500: {fileID: 21300000, guid: b986a91ea1a074750bbdefd193939d86, type: 3}
+  priceOut: {fileID: 21300000, guid: 8a3fb8ef4960d457ea3421eef3257cb3, type: 3}
 --- !u!1 &563368745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,7 +4467,7 @@ MonoBehaviour:
   cloudB: {fileID: 1035009155}
   cloudC: {fileID: 1543213162}
   cloudD: {fileID: 543257336}
-  startY: 21
+  startY: 3
   bounds: 21
   waitTime: 1
   cloudSpeed: 0.025
@@ -6003,7 +6020,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: aa412076bf2f248469ea7b8bd56a5bba, type: 3}
   light: {fileID: 21300000, guid: f6d327bb02b0a40e3ae1c0d45bed2f3a, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: 5f43df0276e804f4a8d9269ca8fa5d14, type: 3}
   unlockedLight: {fileID: 21300000, guid: 5f43df0276e804f4a8d9269ca8fa5d14, type: 3}
   description: MAX A POWERUP
   achievementDescription: {fileID: 1700169591}
@@ -6185,7 +6201,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &815314268
@@ -6444,7 +6460,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: cd36efa5bc30842c5b9132fd3a8a8616, type: 3}
   light: {fileID: 21300000, guid: e39f63a703fba44e78049be1a4fa622d, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: ad44b4f0af9764cc3b8068dbba6e822b, type: 3}
   unlockedLight: {fileID: 21300000, guid: ad44b4f0af9764cc3b8068dbba6e822b, type: 3}
   description: SECRET
   achievementDescription: {fileID: 1700169591}
@@ -7623,7 +7638,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: be54bccfa439741b19b16e3ef18ddf33, type: 3}
   light: {fileID: 21300000, guid: bba76becaa0f447b4a1474ce73586093, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: d1348e7c7c1104bf88d4e62ba839b254, type: 3}
   unlockedLight: {fileID: 21300000, guid: d1348e7c7c1104bf88d4e62ba839b254, type: 3}
   description: REACH 5K
   achievementDescription: {fileID: 1700169591}
@@ -7732,7 +7746,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: 9bc03bd28f9944f079a4c57b3c583262, type: 3}
   light: {fileID: 21300000, guid: 2868aa92e9dd540c8b341f0c283226cd, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: 80cec5aef55834e899aff25b7bf50b4d, type: 3}
   unlockedLight: {fileID: 21300000, guid: 80cec5aef55834e899aff25b7bf50b4d, type: 3}
   description: UNLOCK A POWERUP
   achievementDescription: {fileID: 1700169591}
@@ -7983,7 +7996,7 @@ MonoBehaviour:
   cloudB: {fileID: 563751831}
   cloudC: {fileID: 1543213162}
   cloudD: {fileID: 543257336}
-  startY: 27
+  startY: 9
   bounds: 21
   waitTime: 1
   cloudSpeed: 0.025
@@ -9412,7 +9425,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: 20abde1acc28c4d558ab51987a289dca, type: 3}
   light: {fileID: 21300000, guid: 13d32710b41ea4929a2a5b18788a74a3, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: f4ee8f167a661428dba21c05c57d6d66, type: 3}
   unlockedLight: {fileID: 21300000, guid: f4ee8f167a661428dba21c05c57d6d66, type: 3}
   description: TAKE 10 FLIGHTS
   achievementDescription: {fileID: 1700169591}
@@ -9688,7 +9700,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1257030430
@@ -9781,7 +9793,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1265381792
@@ -10052,7 +10064,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1335533361
@@ -12061,7 +12073,7 @@ MonoBehaviour:
   cloudB: {fileID: 563751831}
   cloudC: {fileID: 1035009155}
   cloudD: {fileID: 543257336}
-  startY: 33
+  startY: 15
   bounds: 21
   waitTime: 1
   cloudSpeed: 0.025
@@ -12707,7 +12719,7 @@ MonoBehaviour:
   cloudB: {fileID: 1035009155}
   cloudC: {fileID: 1543213162}
   cloudD: {fileID: 543257336}
-  startY: 15
+  startY: -3
   bounds: 21
   waitTime: 1
   cloudSpeed: 0.025
@@ -14177,7 +14189,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1815384726
@@ -15726,7 +15738,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: 0ab5096a764e842dba5ecfa7bd54f5c1, type: 3}
   light: {fileID: 21300000, guid: 7c6f1920437ab4b1ba2d3044e35d4bc5, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: 9cb9f372348f64e02991f84bf4591ad8, type: 3}
   unlockedLight: {fileID: 21300000, guid: 9cb9f372348f64e02991f84bf4591ad8, type: 3}
   description: REACH 10K
   achievementDescription: {fileID: 1700169591}
@@ -16072,7 +16083,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: 7ae29f34d57f5425bbdae360fb1bf453, type: 3}
   light: {fileID: 21300000, guid: 11d4b56db458243df814105eb1f08bdb, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: 05d2060e44a764efa86d0dcde4229e17, type: 3}
   unlockedLight: {fileID: 21300000, guid: 05d2060e44a764efa86d0dcde4229e17, type: 3}
   description: REACH 25K
   achievementDescription: {fileID: 1700169591}
@@ -16254,7 +16264,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2070981477
@@ -16875,7 +16885,6 @@ MonoBehaviour:
   customize: {fileID: 837900012}
   normal: {fileID: 21300000, guid: b7ca19f1bc8ca443399348780c270338, type: 3}
   light: {fileID: 21300000, guid: e572f30cc2c054199bdab0e73e02e7ed, type: 3}
-  unlockedNormal: {fileID: 21300000, guid: 8de004862b96945bfa61f6d38e910d36, type: 3}
   unlockedLight: {fileID: 21300000, guid: 8de004862b96945bfa61f6d38e910d36, type: 3}
   description: MAX ALL POWERUPS
   achievementDescription: {fileID: 1700169591}

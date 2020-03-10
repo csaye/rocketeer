@@ -11,7 +11,6 @@ public GameObject customize;
 
 public Sprite normal;
 public Sprite light;
-public Sprite unlockedNormal;
 public Sprite unlockedLight;
 
 public string description;
@@ -67,7 +66,7 @@ private SpriteRenderer spriteRenderer;
 
     private void Normal() {
         if (unlocked) {
-            spriteRenderer.sprite = unlockedNormal;
+            spriteRenderer.sprite = unlockedLight;
         } else {
             spriteRenderer.sprite = normal;
         }
