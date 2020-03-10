@@ -12,25 +12,24 @@ public class ColorSliders : MonoBehaviour
 
     public float xPos, yPos;
 
-    private SpriteRenderer m_SpriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
-    private Color m_NewColor;
+    private Color color;
 
     private bool activated = false;
 
-    private float m_Red, m_Blue, m_Green;
+    private float red, green, blue;
     private float yPosConstant;
 
     void Start()
     {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
-        m_SpriteRenderer.color = Color.blue;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         yPosConstant = yPos;
 
-        m_Red = 1;
-        m_Blue = 1;
-        m_Green = 1;
+        red = 1;
+        green = 1;
+        blue = 1;
     }
 
     void Update() {
@@ -59,14 +58,14 @@ public class ColorSliders : MonoBehaviour
     private void OnGUI()
     {
 
-        m_Red = GUI.HorizontalSlider(new Rect(xPos, yPos, 200, 30), m_Red, 0, 1, slider, thumb);
+        red = GUI.HorizontalSlider(new Rect(xPos, yPos, 200, 30), red, 0, 1, slider, thumb);
 
-        m_Green = GUI.HorizontalSlider(new Rect(xPos, yPos + 35, 200, 30), m_Green, 0, 1, slider, thumb);
+        green = GUI.HorizontalSlider(new Rect(xPos, yPos + 35, 200, 30), green, 0, 1, slider, thumb);
 
-        m_Blue = GUI.HorizontalSlider(new Rect(xPos, yPos + 70, 200, 30), m_Blue, 0, 1, slider, thumb);
+        blue = GUI.HorizontalSlider(new Rect(xPos, yPos + 70, 200, 30), blue, 0, 1, slider, thumb);
 
-        m_NewColor = new Color(m_Red, m_Green, m_Blue);
+        color = new Color(red, green, blue);
 
-        m_SpriteRenderer.color = m_NewColor;
+        spriteRenderer.color = color;
     }
 }
