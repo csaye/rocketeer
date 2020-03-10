@@ -10,9 +10,12 @@ public GameObject achievements;
 public GameObject customize;
 public GameObject buttonController;
 public GameObject rocketDefault;
+public GameObject achievement12;
 
 public Sprite normal;
 public Sprite light;
+
+private Achievement achievementScript12;
 
 private ButtonController buttonControllerScript;
 
@@ -22,6 +25,7 @@ private SpriteRenderer spriteRenderer;
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         buttonControllerScript = buttonController.GetComponent<ButtonController>();
+        achievementScript12 = achievement12.GetComponent<Achievement>();
     }
 
     void Update()
@@ -44,6 +48,7 @@ private SpriteRenderer spriteRenderer;
             Light();
             if (Input.GetMouseButtonDown(0)) {
                 buttonControllerScript.defaultMode = false;
+                achievementScript12.unlocked = true;
             }
         } else {
             Normal();

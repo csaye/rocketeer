@@ -15,12 +15,18 @@ public GameObject priceBullet;
 public GameObject shopCoins;
 public GameObject shopLives;
 public GameObject shopScore;
+public GameObject shopMaxCoins;
+public GameObject shopMaxLives;
+public GameObject shopMaxScore;
 public GameObject achievements;
 public GameObject customize;
 public GameObject achievement1;
 public GameObject achievement6;
 public GameObject achievement7;
 public GameObject achievement8;
+public GameObject achievement9;
+public GameObject achievement10;
+public GameObject achievement11;
 
 public float currentTier;
 
@@ -30,11 +36,17 @@ private Rocket rocketScript;
 private ShopCoins shopCoinsScript;
 private ShopLives shopLivesScript;
 private ShopScore shopScoreScript;
+private ShopMaxCoins shopMaxCoinsScript;
+private ShopMaxLives shopMaxLivesScript;
+private ShopMaxScore shopMaxScoreScript;
 
 private Achievement achievementScript1;
 private Achievement achievementScript6;
 private Achievement achievementScript7;
 private Achievement achievementScript8;
+private Achievement achievementScript9;
+private Achievement achievementScript10;
+private Achievement achievementScript11;
 
 private bool active = false;
 
@@ -46,10 +58,16 @@ private bool active = false;
         shopCoinsScript = shopCoins.GetComponent<ShopCoins>();
         shopLivesScript = shopLives.GetComponent<ShopLives>();
         shopScoreScript = shopScore.GetComponent<ShopScore>();
+        shopMaxCoinsScript = shopMaxCoins.GetComponent<ShopMaxCoins>();
+        shopMaxLivesScript = shopMaxLives.GetComponent<ShopMaxLives>();
+        shopMaxScoreScript = shopMaxScore.GetComponent<ShopMaxScore>();
         achievementScript1 = achievement1.GetComponent<Achievement>();
         achievementScript6 = achievement6.GetComponent<Achievement>();
         achievementScript7 = achievement7.GetComponent<Achievement>();
         achievementScript8 = achievement8.GetComponent<Achievement>();
+        achievementScript9 = achievement9.GetComponent<Achievement>();
+        achievementScript10 = achievement10.GetComponent<Achievement>();
+        achievementScript11 = achievement11.GetComponent<Achievement>();
     }
 
     void Update()
@@ -140,6 +158,15 @@ private bool active = false;
         }
         if ((shopCoinsScript.currentTier >= 4 && shopLivesScript.currentTier >= 4 && shopScoreScript.currentTier >= 2) && !achievementScript8.unlocked) {
             achievementScript8.unlocked = true;
+        }
+        if (shopMaxCoinsScript.currentTier >= 2) {
+            achievementScript9.unlocked = true;
+        }
+        if (shopMaxLivesScript.currentTier >= 2) {
+            achievementScript10.unlocked = true;
+        }
+        if (shopMaxScoreScript.currentTier >= 2) {
+            achievementScript11.unlocked = true;
         }
     }
 }
